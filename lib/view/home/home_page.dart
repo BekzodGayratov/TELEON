@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:telelon/core/decoration/text_form_field_decoration.dart';
+import 'package:telelon/core/extension/size_config_extension.dart';
+import 'package:telelon/core/widgets/telelon_standart_padding_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,8 +19,35 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: SvgPicture.asset("assets/home/logo.svg"),
       ),
-      body: Column(
-        children: [TextFormField()],
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            elevation: 0,
+            floating: true,
+            backgroundColor: Colors.transparent,
+            title: Column(
+              children: [
+                TextFormField(
+                  decoration: InputDecoration(
+                      filled: true,
+                      fillColor: const Color(0xffEEEEEE),
+                      border: TelelonTextFormFieldDecoration.enabledBorder),
+                ),
+              ],
+            ),
+            expandedHeight: 200,
+            pinned: true,
+          ),
+          SliverFillRemaining(
+            child: ListView.builder(
+              itemBuilder: (context, index) => ListTile(
+                title: Text(
+                  'Text $index',
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
