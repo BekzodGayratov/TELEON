@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:telelon/view/screens/home/home_page.dart';
+import 'package:telelon/view/home/home_page.dart';
 import 'package:telelon/view/splash/splash_screen.dart';
 
 class RouteGenerator {

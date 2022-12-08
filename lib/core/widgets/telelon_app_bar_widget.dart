@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:telelon/core/extension/size_config_extension.dart';
 
-class EduOnAppBar extends StatelessWidget implements PreferredSize {
+class TelelonAppBar extends StatelessWidget implements PreferredSize {
   @override
   Size get preferredSize =>
       Size.fromHeight(MediaQuery.of(context).size.height * 0.07);
@@ -11,13 +11,11 @@ class EduOnAppBar extends StatelessWidget implements PreferredSize {
   final Widget title;
   final Widget? trial;
   final BuildContext context;
-  final VoidCallback onTapMenu;
-  final VoidCallback onTapAccount;
-  const EduOnAppBar(
+  final VoidCallback onBackTap;
+  const TelelonAppBar(
       {Key? key,
       required this.context,
-      required this.onTapMenu,
-      required this.onTapAccount,
+      required this.onBackTap,
       required this.title,
       this.trial})
       : super(key: key);
@@ -35,10 +33,7 @@ class EduOnAppBar extends StatelessWidget implements PreferredSize {
         ),
         elevation: 0,
         centerTitle: true,
-        title: SvgPicture.asset(
-          "assets/logo.svg",
-          height: context.height * 0.04,
-        ),
+        title: title,
         actions: [
           trial ?? const SizedBox(),
           SizedBox(
