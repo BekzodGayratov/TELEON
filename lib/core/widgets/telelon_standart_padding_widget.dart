@@ -8,7 +8,7 @@ class TelelonStandartPadding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: context.width * 0.03),
+      padding: EdgeInsets.symmetric(horizontal: context.width * 0.04),
       child: child,
     );
   }

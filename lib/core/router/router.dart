@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:telelon/view/home/home_page.dart';
+import 'package:telelon/view/info/info_page.dart';
 import 'package:telelon/view/splash/splash_screen.dart';
 
 class RouteGenerator {
@@ -13,6 +14,8 @@ class RouteGenerator {
     switch (settings.name) {
       case 'splash':
         return _navigate(const SplashScreen());
+      case 'info':
+        return _navigate(InfoPage());
       case '/':
         return _navigate(const HomePage());
     }

@@ -2,7 +2,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:telelon/core/router/router.dart';
 import 'package:telelon/core/theme/theme.dart';
+import 'package:telelon/view/home/home_page.dart';
 import 'package:telelon/view/info/info_page.dart';
+import 'package:telelon/view/splash/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,9 +29,8 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: TelelonTheme.themeData,
       debugShowCheckedModeBanner: false,
-      // initialRoute: 'splash',
-      // onGenerateRoute: RouteGenerator.router.onGenerate,
-      home: InfoPage(),
+      onGenerateRoute: RouteGenerator.router.onGenerate,
+      initialRoute: 'splash',
     );
   }
 }

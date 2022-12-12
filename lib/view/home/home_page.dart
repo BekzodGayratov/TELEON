@@ -19,20 +19,22 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
-  List _screens = [
-    MainScreen(),
-    FavoritedScreen(),
-    SellScreen(),
-    ChatScreen(),
-    ProfileScreen()
-  ];
   @override
   Widget build(BuildContext context) {
+    List screens = [
+      MainScreen(
+        currentIndex: _currentIndex,
+      ),
+      FavoritedScreen(),
+      SellScreen(),
+      ChatScreen(),
+      ProfileScreen()
+    ];
     return Scaffold(
       appBar: AppBar(
         title: SvgPicture.asset("assets/home/logo.svg"),
       ),
-      body: _screens[_currentIndex],
+      body: screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         type: BottomNavigationBarType.fixed,

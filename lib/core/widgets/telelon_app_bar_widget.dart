@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:telelon/core/extension/size_config_extension.dart';
 
 class TelelonAppBar extends StatelessWidget implements PreferredSize {
@@ -26,7 +25,7 @@ class TelelonAppBar extends StatelessWidget implements PreferredSize {
       preferredSize: Size.infinite,
       child: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: onBackTap,
           icon: const Icon(
             Icons.arrow_back_ios_new,
           ),
