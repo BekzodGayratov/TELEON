@@ -2,16 +2,13 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:telelon/core/router/router.dart';
 import 'package:telelon/core/theme/theme.dart';
-import 'package:telelon/view/home/home_page.dart';
-import 'package:telelon/view/info/info_page.dart';
-import 'package:telelon/view/splash/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   runApp(EasyLocalization(
       saveLocale: true,
-      startLocale: const Locale('uz'),
+      startLocale: const Locale('ru'),
       supportedLocales: const [Locale('uz'), Locale('ru')],
       path: "lib/core/lang",
       child: MyApp()));

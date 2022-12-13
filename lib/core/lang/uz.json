@@ -3,5 +3,10 @@
     "phone":"Telefonlar",
     "computer":"Komputerlar",
     "tablet":"Planshetlar",
-    "acessuar":"Aksessuarlar"
+    "acessuar":"Aksessuarlar",
+    "home":"Asosiy",
+    "favorited":"Saqlanganlar",
+    "sell":"Sotish",
+    "chat":"Chat",
+     "profile":"Profile"
 }

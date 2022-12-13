@@ -62,8 +62,8 @@ class MainScreen extends StatelessWidget {
                                   width: double.infinity,
                                   child: ItemButton(
                                       text: Text("phone".tr()),
-                                      icon: SvgPicture.asset(
-                                          "assets/home/phone.svg")))),
+                                      icon: Image.asset(
+                                          "assets/home/phone.png")))),
                           SizedBox(
                             width: context.width * 0.02,
                           ),
@@ -73,8 +73,7 @@ class MainScreen extends StatelessWidget {
                             width: double.infinity,
                             child: ItemButton(
                                 text: Text("computer".tr()),
-                                icon: SvgPicture.asset(
-                                    "assets/home/computer.svg")),
+                                icon: Image.asset("assets/home/computer.png")),
                           ))
                         ],
                       ),
@@ -88,8 +87,8 @@ class MainScreen extends StatelessWidget {
                                 width: double.infinity,
                                 child: ItemButton(
                                     text: Text("tablet".tr()),
-                                    icon: SvgPicture.asset(
-                                        "assets/home/tablet.svg")))),
+                                    icon: Image.asset(
+                                        "assets/home/tablet.png")))),
                         SizedBox(
                           width: context.width * 0.02,
                         ),
@@ -99,8 +98,8 @@ class MainScreen extends StatelessWidget {
                                 width: double.infinity,
                                 child: ItemButton(
                                     text: Text("acessuar".tr()),
-                                    icon: SvgPicture.asset(
-                                        "assets/home/airpod.svg"))))
+                                    icon:
+                                        Image.asset("assets/home/airpod.png"))))
                       ],
                     ),
                   ],

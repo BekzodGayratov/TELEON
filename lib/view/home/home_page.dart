@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:telelon/core/widgets/telelon_app_bar_widget.dart';
@@ -52,33 +53,33 @@ class _HomePageState extends State<HomePage> {
                   ? SvgPicture.asset("assets/home/bottomNav/selected/home.svg")
                   : SvgPicture.asset(
                       "assets/home/bottomNav/unselected/home.svg"),
-              label: "Asosiy"),
+              label: "home".tr()),
           BottomNavigationBarItem(
               icon: _currentIndex == 1
                   ? SvgPicture.asset(
                       "assets/home/bottomNav/selected/favorite.svg")
                   : SvgPicture.asset(
                       "assets/home/bottomNav/unselected/favorite.svg"),
-              label: "Saqlanganlar"),
+              label: "favorited".tr()),
           BottomNavigationBarItem(
               icon: _currentIndex == 2
                   ? SvgPicture.asset("assets/home/bottomNav/selected/add.svg")
                   : SvgPicture.asset(
                       "assets/home/bottomNav/unselected/add.svg"),
-              label: "Asosiy"),
+              label: "sell".tr()),
           BottomNavigationBarItem(
               icon: _currentIndex == 3
                   ? SvgPicture.asset("assets/home/bottomNav/selected/chat.svg")
                   : SvgPicture.asset(
                       "assets/home/bottomNav/unselected/chat.svg"),
-              label: "Asosiy"),
+              label: "chat".tr()),
           BottomNavigationBarItem(
               icon: _currentIndex == 4
                   ? SvgPicture.asset(
                       "assets/home/bottomNav/selected/profile.svg")
                   : SvgPicture.asset(
                       "assets/home/bottomNav/unselected/profile.svg"),
-              label: "Asosiy"),
+              label: "profile".tr()),
         ],
         onTap: (v) {
           setState(() {
