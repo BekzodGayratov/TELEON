@@ -47,7 +47,7 @@ class _InfoPageState extends State<InfoPage> {
                       image: DecorationImage(
                           image: NetworkImage(
                               "https://source.unsplash.com/random"),
-                          fit: BoxFit.fill)),
+                          fit: BoxFit.cover)),
                 );
               }),
             ),

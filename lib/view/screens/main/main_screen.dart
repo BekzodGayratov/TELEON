@@ -174,7 +174,7 @@ class MainScreen extends StatelessWidget {
                                         image: DecorationImage(
                                             image: NetworkImage(
                                                 "https://source.unsplash.com/random/$index"),
-                                            fit: BoxFit.fill),
+                                            fit: BoxFit.cover),
                                         borderRadius:
                                             BorderRadius.circular(5.0)),
                                   ),

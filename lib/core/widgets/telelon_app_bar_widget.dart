@@ -26,7 +26,6 @@ class TelelonAppBar extends StatelessWidget implements PreferredSize {
       preferredSize: Size.infinite,
       child: AppBar(
         leading: leading,
-        elevation: 0,
      
         title: title,
         actions: [
