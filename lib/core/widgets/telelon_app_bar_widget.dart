@@ -9,12 +9,13 @@ class TelelonAppBar extends StatelessWidget implements PreferredSize {
   Widget get child => throw UnimplementedError();
   final Widget title;
   final Widget? trial;
+  final Widget? leading;
   final BuildContext context;
-  final VoidCallback onBackTap;
   const TelelonAppBar(
       {Key? key,
+      this.leading,
       required this.context,
-      required this.onBackTap,
+  
       required this.title,
       this.trial})
       : super(key: key);
@@ -24,14 +25,9 @@ class TelelonAppBar extends StatelessWidget implements PreferredSize {
     return PreferredSize(
       preferredSize: Size.infinite,
       child: AppBar(
-        leading: IconButton(
-          onPressed: onBackTap,
-          icon: const Icon(
-            Icons.arrow_back_ios_new,
-          ),
-        ),
+        leading: leading,
         elevation: 0,
-        centerTitle: true,
+     
         title: title,
         actions: [
           trial ?? const SizedBox(),

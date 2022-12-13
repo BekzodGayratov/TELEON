@@ -1,9 +1,6 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:telelon/core/decoration/text_form_field_decoration.dart';
-import 'package:telelon/core/extension/size_config_extension.dart';
-import 'package:telelon/core/theme/theme.dart';
+import 'package:telelon/core/widgets/telelon_app_bar_widget.dart';
 import 'package:telelon/view/screens/chat/chat_screen.dart';
 import 'package:telelon/view/screens/favorited/favorited_screen.dart';
 import 'package:telelon/view/screens/main/main_screen.dart';
@@ -21,7 +18,7 @@ class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
-    List screens = [
+    List<Widget> screens = [
       MainScreen(
         currentIndex: _currentIndex,
       ),
@@ -30,10 +27,21 @@ class _HomePageState extends State<HomePage> {
       ChatScreen(),
       ProfileScreen()
     ];
-    return Scaffold(
-      appBar: AppBar(
+
+    List<PreferredSizeWidget> appBars = [
+      AppBar(
         title: SvgPicture.asset("assets/home/logo.svg"),
       ),
+      TelelonAppBar(
+          context: context, leading: null, title: Text("Saqlanganlar")),
+      TelelonAppBar(
+          context: context, leading: null, title: Text("E'lon berish")),
+      TelelonAppBar(context: context, leading: null, title: Text("Chat")),
+      TelelonAppBar(context: context, leading: null, title: Text("Profile"))
+    ];
+
+    return Scaffold(
+      appBar: appBars[_currentIndex],
       body: screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
@@ -51,7 +59,7 @@ class _HomePageState extends State<HomePage> {
                       "assets/home/bottomNav/selected/favorite.svg")
                   : SvgPicture.asset(
                       "assets/home/bottomNav/unselected/favorite.svg"),
-              label: "Asosiy"),
+              label: "Saqlanganlar"),
           BottomNavigationBarItem(
               icon: _currentIndex == 2
                   ? SvgPicture.asset("assets/home/bottomNav/selected/add.svg")

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:telelon/view/home/home_page.dart';
 import 'package:telelon/view/info/info_page.dart';
+import 'package:telelon/view/screens/favorited/favorited_screen.dart';
 import 'package:telelon/view/splash/splash_screen.dart';
 
 class RouteGenerator {

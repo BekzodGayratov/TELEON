@@ -20,9 +20,14 @@ class _InfoPageState extends State<InfoPage> {
     return Scaffold(
       appBar: TelelonAppBar(
         context: context,
-        onBackTap: () {
-          Navigator.pop(context);
-        },
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            Icons.arrow_back_ios_new,
+          ),
+        ),
         title: const Text("iPhone 13 Pro Max 512Gb Silver 2-sim DUOS"),
         trial: IconButton(
           onPressed: () {},
