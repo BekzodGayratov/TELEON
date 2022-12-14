@@ -18,6 +18,7 @@ class _InfoPageState extends State<InfoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xffFFFFFF),
       appBar: TelelonAppBar(
         context: context,
         leading: IconButton(
@@ -264,22 +265,22 @@ class _InfoPageState extends State<InfoPage> {
                               color: Color(0xff999999))),
                     ],
                   ),
-                  const Divider(
-                    color: Color(0xffF6F6F6),
-                    thickness: 10,
-                  ),
-                  SizedBox(
-                    height: context.height * 0.02,
-                  ),
-                  Text(
-                    "O'xshash mahsulotlar",
-                    style: TextStyle(
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.black),
-                  ),
                 ],
               ),
+            ),
+            Divider(
+              color: TelelonTheme.backgroundColor,
+              thickness: 10,
+            ),
+            SizedBox(
+              height: context.height * 0.02,
+            ),
+            Text(
+              "O'xshash mahsulotlar",
+              style: TextStyle(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black),
             ),
             SizedBox(
               height: context.height * 0.32,

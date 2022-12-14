@@ -7,8 +7,7 @@ import 'package:telelon/core/theme/theme.dart';
 import 'package:telelon/core/widgets/telelon_standart_padding_widget.dart';
 
 class MainScreen extends StatelessWidget {
-  int currentIndex = 0;
-  MainScreen({super.key, required this.currentIndex});
+  MainScreen({super.key});
   final bucket = PageStorageBucket();
 
   @override
@@ -16,7 +15,6 @@ class MainScreen extends StatelessWidget {
     return PageStorage(
       bucket: bucket,
       child: CustomScrollView(
-        key: PageStorageKey(currentIndex.toString()),
         slivers: <Widget>[
           SliverAppBar(
             elevation: 0,
@@ -119,11 +117,8 @@ class MainScreen extends StatelessWidget {
               },
               child: Column(
                 children: [
-                  const Divider(
-                    color: Color(0xffF6F6F6),
-                    thickness: 10,
-                  ),
                   Container(
+                    color: TelelonTheme.telelonWhiteColor,
                     margin:
                         EdgeInsets.symmetric(vertical: context.height * 0.008),
                     height: context.height * 0.31,

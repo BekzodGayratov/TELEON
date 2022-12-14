@@ -41,6 +41,7 @@ dependencies:
   bloc: ^8.1.0
   flutter_bloc: ^8.1.1
   easy_localization: ^3.0.1
+  equatable: ^2.0.5
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,7 @@ flutter:
   assets:
     - assets/splash/
     - assets/home/
+    - assets/sell/
     - assets/home/bottomNav/selected/
     - assets/home/bottomNav/unselected/
     - lib/core/lang/

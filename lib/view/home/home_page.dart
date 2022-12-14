@@ -6,7 +6,7 @@ import 'package:telelon/view/screens/chat/chat_screen.dart';
 import 'package:telelon/view/screens/favorited/favorited_screen.dart';
 import 'package:telelon/view/screens/main/main_screen.dart';
 import 'package:telelon/view/screens/profile/profile_screen.dart';
-import 'package:telelon/view/screens/sell/sell_screen.dart';
+import 'package:telelon/view/screens/sell/sell_item_category_screend.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -20,11 +20,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     List<Widget> screens = [
-      MainScreen(
-        currentIndex: _currentIndex,
-      ),
+      MainScreen(),
       FavoritedScreen(),
-      SellScreen(),
+      SellItemCategoryScreen(),
       ChatScreen(),
       ProfileScreen()
     ];

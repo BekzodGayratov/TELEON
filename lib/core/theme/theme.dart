@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 class TelelonTheme {
   static Color unSelectedColor = const Color(0xff999999);
   static Color backgroundColor = const Color(0xffF6F6F6);
+  static Color telelonWhiteColor = const Color(0xffFFFFFF);
   static ThemeData themeData = ThemeData(
     outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
@@ -18,6 +19,6 @@ class TelelonTheme {
             systemStatusBarContrastEnforced: true,
             statusBarColor: Colors.white,
             statusBarIconBrightness: Brightness.dark)),
-    scaffoldBackgroundColor: const Color(0xffFFFFFF),
+    scaffoldBackgroundColor: const Color(0xffF6F6F6),
   );
 }
